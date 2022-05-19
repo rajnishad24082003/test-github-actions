@@ -16,4 +16,4 @@ jobs:
         env: 
           VERCEL_ORG_ID: PAixAA17ldoy4zEpfxmAl8uk
           VERCEL_PROJECT_ID: prj_k2hXPJxoiiMcmywU9YNf2DZC8y54
-        run: npm deploy
+        run: npm start
