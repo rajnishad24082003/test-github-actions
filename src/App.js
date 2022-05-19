@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import Navbar from "./components/Navbar"
+import Sign from "./components/Sign"
+import Firstcondent from "./components/Firstcondent"
+import Secondcontent from "./components/Secondcontent"
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+    <Route exact path="/" element={<><Firstcondent/><Secondcontent/></>}></Route>
+    <Route exact path="/Sign" element={<Sign/>}></Route>
+    </Routes>
+    </BrowserRouter>
+    
+    </>
   );
 }
 
